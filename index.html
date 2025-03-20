@@ -1,73 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>    
-    <div class="container-fluid">
-        <header class="row cabecalho">
-            <nav class="navbar navbar-expand-lg navbar-expand-md d-flex justify-content-between px-3 px-md-5">
-                
-                <a class="navbar-brand fs-2 fw-bolder" href="#">Adventurer</a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<body>
 
-                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto fw-bolder gap-5 fs-5">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Aventuras</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                    </ul>
-                    <span class="btn-action">
-                        <a">Inicie sua Aventura!</a>
-                    </span>
-                </div>            
-            </nav>
-        </header>
+    <header class="cabecalho">
+        <a class="cabecalho__brand" href="#">Adventurer</a>
+        <nav class="cabecalho__navbar">
+            <ul class="cabecalho__navbar__lista">
+                <li class="cabecalho__navbar__lista__item">
+                    <a class="" href="#">Início</a>
+                </li>
+                <li class="cabecalho__navbar__lista__item">
+                    <a class="" href="#">Aventuras</a>
+                </li>
+                <li class="cabecalho__navbar__lista__item">
+                    <a class="" href="#">Sobre</a>
+                </li>
+                <li class="cabecalho__navbar__lista__item">
+                    <a class="" href="#">Contato</a>
+                </li>
+                <li class="cabecalho__navbar__lista__item">
+                    <a class="" href="#">Blog</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="cabecalho__btn">
+            Inicie sua Aventura!
+        </button>
+        <div class="cabecalho__hambuguer">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
 
-        <main class="row">
-            <div class="conteudo-principal d-flex flex-column align-items-center mt-5 px-2 px-md-5">
-                <div class="conteudo-texto text-center">
-                    <p class="fw-bolder fs-1">Estamos Aqui pra encontrar <span class="sub-texto">sua nova aventura</span></p>
-                    <p>Tentamos deixar sua vida mais animada do que antes e oferecemos tudo o que você precisa para uma viagem memorável da maneira mais simples e possível</p>
-                    <form class="form d-flex flex-column gap-2 mx-auto">
-                        <input class="form-control" type="text" placeholder="Check in/out">
-                        <input class="form-control" type="text" placeholder="Passageiros">
-                        <button class="btn-form">Iniciar Aventura</button>
-                    </form>
-                </div>
-                <img class="img-principal my-5" src="/assets/viagem-cachorro.svg" alt="Desenho de um home olhando um mapa com uma bolsa nas costas, uma mala de carrinho a sua esquerda e um cachorro a direita. Um avião esta voando por cima">
-                <div class="lista-beneficios">
-                    <h3>Por que escolher a gente?</h3>
-                    <ul>
-                        <li>
-                            
-                        </li>
-                    </ul>
-                </div>
+    <main class="conteudo-principal">
+        <div class="conteudo-principal__secao-a">
+            <div class="conteudo-principal__secao">
+                <p class="conteudo-principal__secao__paragrafo">Estamos Aqui pra encontrar <span>Sua nova aventura🌞</span>
+                </p>
+                <p>Tentamos deixar sua vida mais animada do que antes e oferecemos tudo o que você precisa para uma viagem
+                    memorável da maneira mais simples e possível</p>
+                <form class="conteudo-principal__secao__formulario">
+                    <input class="conteudo-principal__secao__formulario__input" type="text" placeholder="Check in/out">
+                    <input class="conteudo-principal__secao__formulario__input" type="text" placeholder="Passageiros">
+                    <button class="conteudo-principal__secao__formulario__btn">Iniciar Aventura</button>
+                </form>
             </div>
+            <img class="conteudo-principal__imagem" src="/assets/viagem-cachorro.svg"
+                alt="Desenho de um home olhando um mapa com uma bolsa nas costas, uma mala de carrinho a sua esquerda e um cachorro a direita. Um avião esta voando por cima">
+        </div>
+        <div class="conteudo-principal__lista-beneficios">
+            <h3>Por que escolher a gente?</h3>
+            <ul class="conteudo-principal__lista-beneficios__lista">
+                <li class="conteudo-principal__lista-beneficios__lista_item">
+                    <div class="conteudo-principal__lista-beneficios__icone">🌟</i></div>
+                    <h4>Pacotes especiais</h4>
+                    <p>Incentivamos você a tentar novidades.</p>
 
-        </main>
-    </div>
+                </li>
+                <li class="conteudo-principal__lista-beneficios__lista_item">
+                    <div class="conteudo-principal__lista-beneficios__icone">🔁</div>
+                    <h4>Simplificação</h4>
+                    <p>Facilitamos como você viaja pelos melhores lugares do mundo</p>
+
+                </li>
+                <li class="conteudo-principal__lista-beneficios__lista_item">
+                    <div class="conteudo-principal__lista-beneficios__icone">🔥</i></div>
+                    <h4>Melhores serviços</h4>
+                    <p>Criamos experiências especiais para você</p>
+
+                </li>
+                <li class="conteudo-principal__lista-beneficios__lista_item">
+                    <div class="conteudo-principal__lista-beneficios__icone">🎧</i></div>
+                    <h4>Suporte 24h</h4>
+                    <p>A qualquer momento, de qualquer lugar, estamos aqui para te atender</p>
+
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <section class="section__destino">
+        <h3>Nossos melhores destinos</h3>
+        <p>Vamos encontrar os melhores deles</p>
+        <div class="section__destino__galeria">
+            <div class="section__destino__galeria__item">
+                <img src="/assets/inverno.png" alt="Foto de um trem e um local com neve">
+            </div>
+            <div class="section__destino__galeria__item">
+                <img src="/assets/outono.png" alt="Foto de vários arvores no período do outono">
+            </div>
+            <div class="section__destino__galeria__item">
+                <img src="/assets/primavera.png" alt="Foto de vários arvores no período do outono">
+            </div>
+            <div class="section__destino__galeria__item">
+                <img src="/assets/verao.png" alt="Foto de vários arvores no período do outono">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/e8e1d225aa.js" crossorigin="anonymous"></script>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
 </html>

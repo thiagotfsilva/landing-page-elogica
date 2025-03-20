@@ -2,61 +2,337 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html, body {
     width: 100%;
     height: 100%;
+    font-size: 16px;
     background-color: #f9ce89 !important;/* Cor de fundo */
 }
 
+ul {
+    padding: 0 !important;
+}
 
 .cabecalho {
     background-color: #f8ce77; /* Cor do cabeçalho */
+    width: 100%;
+
+    padding: 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: 768px) {
+        justify-content: space-around;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 2rem;
+        justify-content: space-between;
+    }
+
 }
 
-.btn-action {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.cabecalho__brand {
+    color: #111;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bolder;
 
+    
+    @media (min-width: 1024px) {
+        font-size: 34px;
+    }
+    
+}
+
+.cabecalho__navbar {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: flex;
+
+        & > ul {     
+
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+    }
+}
+
+.cabecalho__navbar__lista__item {
+
+    list-style: none;
+    cursor: pointer;
+
+    & > a {
+        color: #111;
+        text-decoration: none;
+    }
+}
+
+.cabecalho__btn {
+    display: none;
+    
     width: 180px;
     height: 40px;
 
     background-color: #ffc107;
 
     border-radius: 4px;
+    border: none;
+
+    text-align: center;
+
+    font-size: 1rem;
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
+}
+
+.cabecalho__hambuguer {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.conteudo-principal {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+        text-align: inherit;
+    }
+}
+
+.conteudo-principal__secao-a {
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+        height: calc(100vh - 104px);
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+.conteudo-principal__secao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    @media (min-width: 768px) {
+        width: 80%;
+        padding: 1.8rem;
+    }
+
+    @media (min-width: 1024px) {
+        width: 55%;
+
+    }
+}
+
+.conteudo-principal__secao__paragrafo {
+    font-size: 1.75rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+
+    @media (min-width: 768px) {
+        font-size: 36px;
+        margin-bottom: inherit;
+    }
+
     
 }
 
-.sub-texto {
+.conteudo-principal__secao__paragrafo span {
     color: #f79501;
 }
 
-.form {
-    width: 70%;
+.conteudo-principal__secao__formulario {
+    width: 80%;
+    margin-top: 1rem;
+
+    @media (min-width: 768px) {
+        width: 70%;
+        padding: 1.4rem;
+    }
+
+    @media (min-width: 1024px) {
+        width: 100%;
+
+        display: flex;
+        gap: 8px;
+        margin-top: 0;
+        padding: 0;
+    }
 }
 
-.btn-form {
-    margin-top: 4px;
+.conteudo-principal__secao__formulario__input {
+    width: 95%;
     padding: 8px;
-
-    background-color: #f79501;
-    color: #fff;
-
     border: none;
     border-radius: 4px;
+    margin-bottom: 8px;
+    font-size: 16px;
+
+    @media (min-width: 1024px) {
+        padding: 0 0 0 5px; 
+        margin-bottom: 0;  
+        width: 100%;
+    }
 }
 
-.img-principal {
-    margin-top: 8px;
+.conteudo-principal__secao__formulario__btn {
+    margin-top: 4px;
+    padding: 8px;
+    width: 95%;
+    background-color: #f79501;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+
+    @media (min-width: 1024px) {
+        margin-top: inherit;      
+    }
+}
+
+.conteudo-principal__imagem {
+    margin: 24px 0 20px 0;
     width: 80%;
+
+    @media (min-width: 1024px) {
+        width: 45%;      
+    }
 }
 
-.lista-beneficios {
+.conteudo-principal__lista-beneficios {
+    width: 90%;
     background-color: #f5deb3;
-    width: 92%;
     border-radius: 15px;
+    text-align: center;
+
+    padding-top: 1.4rem;
+    padding-bottom: 2rem;
+
+    & > h3 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    @media (min-width: 768px) {
+        width: 98%;
+        display: flex;        
+    }
+
+    @media (min-width: 1024px) {
+        margin-top: 3rem;        
+    }
+
+}
+
+.conteudo-principal__lista-beneficios__lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+    }
+
+}
+
+.conteudo-principal__lista-beneficios__lista_item {
+    list-style: none;
+
+    & > h4 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 1rem !important;
+    }
+
+    & > p {
+        width: 100%;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 1rem !important;
+    }
+
+}
+
+.section__destino {
+    background-color: #111;
+    width: 100%;
 
     text-align: center;
+
+    padding-bottom: 1.4rem;
+
+    & > h3 {
+        padding-top: 2.4rem;
+        color: #fff;
+        font-size: 1.4rem;
+    }
+
+    & > p {
+        color: #fff;
+        font-size: 1rem;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+}
+
+.section__destino__galeria {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.section__destino__galeria__item {
+    width: 95%;
+    border-radius: 15px;
+    height: 400px;
+    overflow: hidden;
+    /* & > img {
+        filter: grayscale(100%);
+    
+        @media (min-width: 768px) {
+            width: 45%;
+        }
+    
+        @media (min-width: 1024px) {
+            width: 23%;
+        }
+    } */
+    
 }
